@@ -39,7 +39,7 @@ class Git:
             }
         """
         if single_commit:
-            cmd = ['git', 'diff', f'{single_commit}^!', '--name-only']
+            cmd = ['git', 'diff', '{}^!'.format(single_commit), '--name-only']
         elif base and remote:
             if base == 'WORKING':
                 cmd = ['git', 'diff', remote, '--name-only']
