@@ -48,7 +48,7 @@ class Git:
             else:
                 cmd = ['git', 'diff', base, remote, '--name-only']
         else:
-            raise HTTPError(400, f'Either single_commit or (base and remote) must be provided')
+            raise HTTPError(400, 'Either single_commit or (base and remote) must be provided')
 
         
         response = {}
